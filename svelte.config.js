@@ -1,0 +1,26 @@
+import adapter from '@sveltejs/adapter-static';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	kit: {
+		prerender: {
+			handleHttpError: ({ path, message }) => {
+				// Ignore missing favicon during prerender
+				if (path === '/favicon.png') return;
+				throw new Error(message);
+			}
+		},
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: '404.html',
+			precompress: false,
+			strict: true
+		}),
+		paths: {
+			base: process.env.BASE_PATH ?? ''
+		}
+	}
+};
+
+export default config;
