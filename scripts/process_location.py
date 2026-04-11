@@ -14,7 +14,7 @@ MARKERS_FILE = PROJECT_ROOT / "static" / "data" / "markers.json"
 
 FULL_MAX_PX        = 1200
 THUMB_DESKTOP_PX   = 150
-THUMB_MOBILE_PX    = 100
+THUMB_MOBILE_PX    = 80
 
 
 def _slug(text):
@@ -93,7 +93,7 @@ def process_location(image_path, cafe_name, caption, address):
 process_location(
     '/Users/josh/Desktop/IMG_0635.jpeg',
     "The Chestnut Tree",
-    "Sat at a sunlight table, drinking a nice coffee",
+    "Sat at a sunlit table, drinking a nice coffee",
     "542 Barkly Street, West Footscray"
 )
 
@@ -103,4 +103,20 @@ process_location(
     "Seddon Book Alley",
     "You're going to find treasures here",
     "107 Victoria Street, Seddon"
+)
+
+
+process_location(
+    '/Users/josh/Desktop/IMG_0633.jpeg',
+    "Sun Bookshop",
+    "It connects right into a cool old cinema",
+    "10 Ballarat Street, Yarraville"
+)
+
+
+process_location(
+    '/Users/josh/Desktop/IMG_0634.jpeg',
+    "Book and Paper",
+    "They have some prints by local artists",
+    "36 Douglas Parade, Williamstown"
 )

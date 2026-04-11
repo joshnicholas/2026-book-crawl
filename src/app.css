@@ -33,7 +33,7 @@
 	--header-color:       #ff7a71;  /* same orange as map labels */
 	--header-font-size:   16px;
 	--header-font-weight: bold;
-	--header-height:      40px;             /* keep in sync with actual rendered height */
+	--header-height:      58px;             /* keep in sync with actual rendered height */
 
 	/* ── Marker & popup ──────────────────────────────────────────────────── */
 	--marker-size:            150px;   /* desktop thumbnail size */
@@ -82,8 +82,11 @@ body {
 	left: 0;
 	right: 0;
 	z-index: 200;
-	text-align: center;
-	padding: 10px 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2px;
+	padding: 8px 16px;
 	font-size: var(--header-font-size);
 	font-weight: var(--header-font-weight);
 	color: var(--header-color);
@@ -97,12 +100,16 @@ body {
 	pointer-events: none;
 }
 
+.site-subtitle {
+	font-size: 11px;
+	font-weight: var(--header-font-weight);
+}
+
 /* ── By Josh link ────────────────────────────────────────────────────────── */
 .by-josh {
 	position: fixed;
 	bottom: 8px;
-	left: 50%;
-	transform: translateX(-50%);
+	left: 12px;
 	z-index: 200;
 	color: var(--header-color);
 	font-size: 11px;
@@ -118,6 +125,18 @@ body {
 
 .by-josh:hover {
 	text-decoration: underline;
+}
+
+/* ── OSM attribution ─────────────────────────────────────────────────────── */
+.map-attribution {
+	position: fixed;
+	bottom: 8px;
+	right: 12px;
+	z-index: 200;
+	color: var(--color-text-muted);
+	font-size: 11px;
+	text-shadow: 0 0 4px rgba(0, 0, 0, 1);
+	pointer-events: none;
 }
 
 /* ── MapLibre controls ───────────────────────────────────────────────────── */
@@ -147,33 +166,6 @@ body {
 	filter: invert(1);
 }
 
-.maplibregl-ctrl-attrib,
-.maplibregl-ctrl-attrib.maplibregl-compact,
-.maplibregl-ctrl-bottom-right .maplibregl-ctrl-attrib,
-.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib {
-	background: transparent !important;
-	background-color: transparent !important;
-	box-shadow: none !important;
-	border: none !important;
-	color: var(--color-text-muted) !important;
-	font-size: 11px !important;
-}
-
-.maplibregl-ctrl-attrib a {
-	color: var(--color-orange-light) !important;
-}
-
-.maplibregl-ctrl-attrib-button {
-	display: none !important;
-}
-
-.maplibregl-ctrl-attrib-inner {
-	display: none !important;
-}
-
-.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-inner {
-	display: block !important;
-}
 
 /* ── MapLibre popups ─────────────────────────────────────────────────────── */
 .maplibregl-popup-content {
@@ -264,6 +256,10 @@ body {
 .popup-text {
 	background: rgba(255, 254, 254, 0.80);
 	width: 100%;
+	min-width: var(--popup-width);
+	box-sizing: border-box;
+	overflow-wrap: break-word;
+	word-break: break-word;
 }
 
 @media (max-width: 768px) {
@@ -273,6 +269,10 @@ body {
 
 	.marker-popup img {
 		max-width: var(--popup-width-mobile);
+	}
+
+	.popup-text {
+		min-width: var(--popup-width-mobile);
 	}
 }
 
@@ -294,11 +294,6 @@ body {
 
 .marker-popup strong {
 	color: var(--popup-text);
-}
-
-.popup-text p,
-.popup-text strong {
-	color: #000;
 }
 
 .popup-text p,

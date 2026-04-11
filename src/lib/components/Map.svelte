@@ -19,8 +19,6 @@
 	let mapEl;
 	let map;
 	let maskCanvas;
-	let byJoshEl;
-	let attrObserver;
 
 	function getCSSVar(name) {
 		return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -188,23 +186,6 @@
 		});
 
 		map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
-		map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-right');
-
-		// "by Josh" toggles the attribution; hide it when credits are open.
-		setTimeout(() => {
-			const attrEl = mapEl.querySelector('.maplibregl-ctrl-attrib');
-			if (!attrEl) return;
-
-			byJoshEl.addEventListener('click', (e) => {
-				e.preventDefault();
-				attrEl.classList.toggle('maplibregl-compact-show');
-			});
-
-			attrObserver = new MutationObserver(() => {
-				byJoshEl.style.display = attrEl.classList.contains('maplibregl-compact-show') ? 'none' : 'block';
-			});
-			attrObserver.observe(attrEl, { attributes: true, attributeFilter: ['class'] });
-		}, 0);
 
 		maskCanvas = document.createElement('canvas');
 		Object.assign(maskCanvas.style, {
@@ -321,13 +302,11 @@
 	});
 
 	onDestroy(() => {
-		if (attrObserver) attrObserver.disconnect();
 		if (map) map.remove();
 	});
 </script>
 
 <div class="map-container" bind:this={mapEl}></div>
-<a class="by-josh" href="https://joshnicholas.com" rel="me" bind:this={byJoshEl}>by Josh</a>
 
 <style>
 	.map-container {

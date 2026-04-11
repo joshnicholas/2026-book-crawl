@@ -1,24 +1,46 @@
 [
   {
-    "id": "33ff3949",
+    "id": "e95eda9a",
     "cafe_name": "The Chestnut Tree",
-    "caption": "Sat at a sunlight table, drinking a nice coffee",
+    "caption": "Sat at a sunlit table, drinking a nice coffee",
     "address": "542 Barkly Street, West Footscray",
-    "image": "/images/the-chestnut-tree-33ff3949.jpg",
-    "thumb": "/images/the-chestnut-tree-33ff3949-thumb.jpg",
-    "thumb_mobile": "/images/the-chestnut-tree-33ff3949-thumb-mobile.jpg",
+    "image": "/images/the-chestnut-tree-e95eda9a.jpg",
+    "thumb": "/images/the-chestnut-tree-e95eda9a-thumb.jpg",
+    "thumb_mobile": "/images/the-chestnut-tree-e95eda9a-thumb-mobile.jpg",
     "lat": -37.7974316,
     "lng": 144.8790253
   },
   {
-    "id": "0b497494",
+    "id": "77944e12",
     "cafe_name": "Seddon Book Alley",
     "caption": "You're going to find treasures here",
     "address": "107 Victoria Street, Seddon",
-    "image": "/images/seddon-book-alley-0b497494.jpg",
-    "thumb": "/images/seddon-book-alley-0b497494-thumb.jpg",
-    "thumb_mobile": "/images/seddon-book-alley-0b497494-thumb-mobile.jpg",
+    "image": "/images/seddon-book-alley-77944e12.jpg",
+    "thumb": "/images/seddon-book-alley-77944e12-thumb.jpg",
+    "thumb_mobile": "/images/seddon-book-alley-77944e12-thumb-mobile.jpg",
     "lat": -37.8061115,
     "lng": 144.8920447
+  },
+  {
+    "id": "cfa56974",
+    "cafe_name": "Sun Bookshop",
+    "caption": "It connects right into a cool old cinema",
+    "address": "10 Ballarat Street, Yarraville",
+    "image": "/images/sun-bookshop-cfa56974.jpg",
+    "thumb": "/images/sun-bookshop-cfa56974-thumb.jpg",
+    "thumb_mobile": "/images/sun-bookshop-cfa56974-thumb-mobile.jpg",
+    "lat": -37.8160627,
+    "lng": 144.8908891
+  },
+  {
+    "id": "c41503f1",
+    "cafe_name": "Book and Paper",
+    "caption": "They have some prints by local artists",
+    "address": "36 Douglas Parade, Williamstown",
+    "image": "/images/book-and-paper-c41503f1.jpg",
+    "thumb": "/images/book-and-paper-c41503f1-thumb.jpg",
+    "thumb_mobile": "/images/book-and-paper-c41503f1-thumb-mobile.jpg",
+    "lat": -37.8577743,
+    "lng": 144.897993
   }
 ]
