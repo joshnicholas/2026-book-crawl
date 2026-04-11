@@ -1,24 +1,52 @@
-/* ============================================================
-   Theme colours — update these hex values as needed
-   ============================================================ */
 :root {
-	--color-orange: #e8630a;
+	/* ── Brand colours ───────────────────────────────────────────────────── */
+	--color-orange:       #e8630a;
 	--color-orange-light: #f0874a;
-	--color-orange-dark: #b34c06;
+	--color-orange-dark:  #b34c06;
 
-	--color-green: #2d6a2d;
-	--color-green-light: #4a8f4a;
-	--color-green-dark: #1a3f1a;
+	--color-green:        #2d6a2d;
+	--color-green-light:  #4a8f4a;
+	--color-green-dark:   #1a3f1a;
 
-	--color-bg: #1a1a1a;
-	--color-surface: #242424;
-	--color-text: #f0ede8;
-	--color-text-muted: #a09a92;
+	--color-bg:           #fff;
+	--color-surface:      #242424;
+	--color-text:         #ffd600;
+	--color-text-muted:   #a09a92;
+
+	/* ── Map tile colours ────────────────────────────────────────────────── */
+	--map-background:         #213C51;
+	--map-land:               #213C51;
+	--map-water:              #425d71;
+	--map-park:               #557792;
+	--map-urban:              #557792;
+	--map-road-minor:         #6594B1;
+	--map-road-secondary:     #6594B1;
+	--map-road-primary:       #6594B1;
+	--map-road-motorway:      #6594B1;
+	--map-building:           #557792;
+	--map-building-outline:   #557792;
+	--map-label:              #ff7e1a;
+	--map-label-halo:         #000;
+	--map-label-font:         Noto Sans Bold;
+
+	/* ── Header ──────────────────────────────────────────────────────────── */
+	--header-color:       #ff7a71;  /* same orange as map labels */
+	--header-font-size:   16px;
+	--header-font-weight: bold;
+	--header-height:      40px;             /* keep in sync with actual rendered height */
+
+	/* ── Marker & popup ──────────────────────────────────────────────────── */
+	--marker-size:            150px;   /* desktop thumbnail size */
+	--marker-size-mobile:     100px;   /* mobile thumbnail size */
+	--marker-rotation-range:  25;      /* thumbnails rotate ± this many degrees */
+	--popup-width:            420px;   /* desktop popup width */
+	--popup-width-mobile:     90vw;    /* mobile popup width */
+	--popup-max-image-height: 70vh;    /* prevents popup image pushing off-screen */
+	--popup-bg:               transparent;
+	--popup-text:             var(--color-orange);
+	--popup-text-weight:      bold;
 }
 
-/* ============================================================
-   Reset & base
-   ============================================================ */
 *,
 *::before,
 *::after {
@@ -40,9 +68,6 @@ body {
 	line-height: 1.5;
 }
 
-/* ============================================================
-   Layout
-   ============================================================ */
 .app {
 	display: flex;
 	flex-direction: column;
@@ -50,61 +75,233 @@ body {
 	width: 100vw;
 }
 
-/* ============================================================
-   Leaflet overrides — strip rounded corners from all controls
-   ============================================================ */
-.leaflet-bar,
-.leaflet-bar a,
-.leaflet-control-attribution,
-.leaflet-popup-content-wrapper,
-.leaflet-popup-tip-container,
-.leaflet-tooltip {
-	border-radius: 0 !important;
+/* ── Site header ─────────────────────────────────────────────────────────── */
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 200;
+	text-align: center;
+	padding: 10px 16px;
+	font-size: var(--header-font-size);
+	font-weight: var(--header-font-weight);
+	color: var(--header-color);
+	text-shadow:
+		-1px -1px 0 #000,
+		 1px -1px 0 #000,
+		-1px  1px 0 #000,
+		 1px  1px 0 #000,
+		 0px  0px 6px rgba(0, 0, 0, 1),
+		 2px  6px 14px rgba(0, 0, 0, 1);
+	pointer-events: none;
 }
 
-.leaflet-bar {
-	border: 2px solid var(--color-orange);
-	background: var(--color-bg);
-	box-shadow: none;
-}
-
-.leaflet-bar a {
-	background-color: var(--color-bg);
-	color: var(--color-orange);
-	border-bottom: 1px solid var(--color-orange);
-	width: 32px;
-	height: 32px;
-	line-height: 32px;
-	font-size: 18px;
-	font-weight: bold;
-	text-decoration: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.leaflet-bar a:last-child {
-	border-bottom: none;
-}
-
-.leaflet-bar a:hover {
-	background-color: var(--color-orange);
-	color: var(--color-bg);
-}
-
-.leaflet-bar a.leaflet-disabled {
-	opacity: 0.4;
-	cursor: not-allowed;
-}
-
-.leaflet-control-attribution {
-	background-color: var(--color-bg) !important;
-	color: var(--color-text-muted) !important;
+/* ── By Josh link ────────────────────────────────────────────────────────── */
+.by-josh {
+	position: fixed;
+	bottom: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 200;
+	color: var(--header-color);
 	font-size: 11px;
-	padding: 2px 6px;
-	border-top: 1px solid var(--color-orange-dark);
+	font-weight: var(--header-font-weight);
+	text-decoration: none;
+	text-shadow:
+		-1px -1px 0 #000,
+		 1px -1px 0 #000,
+		-1px  1px 0 #000,
+		 1px  1px 0 #000,
+		 0px  0px 6px rgba(0, 0, 0, 1);
 }
 
-.leaflet-control-attribution a {
+.by-josh:hover {
+	text-decoration: underline;
+}
+
+/* ── MapLibre controls ───────────────────────────────────────────────────── */
+.maplibregl-ctrl-group {
+	background: var(--color-bg) !important;
+	border: 2px solid var(--color-orange) !important;
+	box-shadow: none !important;
+}
+
+.maplibregl-ctrl-group button {
+	background-color: var(--color-bg) !important;
+	color: var(--color-orange) !important;
+	border-bottom: 1px solid var(--color-orange) !important;
+	width: 32px !important;
+	height: 32px !important;
+}
+
+.maplibregl-ctrl-group button:last-child {
+	border-bottom: none !important;
+}
+
+.maplibregl-ctrl-group button:hover {
+	background-color: var(--color-orange) !important;
+}
+
+.maplibregl-ctrl-group button:hover span {
+	filter: invert(1);
+}
+
+.maplibregl-ctrl-attrib,
+.maplibregl-ctrl-attrib.maplibregl-compact,
+.maplibregl-ctrl-bottom-right .maplibregl-ctrl-attrib,
+.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib {
+	background: transparent !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+	border: none !important;
+	color: var(--color-text-muted) !important;
+	font-size: 11px !important;
+}
+
+.maplibregl-ctrl-attrib a {
 	color: var(--color-orange-light) !important;
+}
+
+.maplibregl-ctrl-attrib-button {
+	display: none !important;
+}
+
+.maplibregl-ctrl-attrib-inner {
+	display: none !important;
+}
+
+.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-inner {
+	display: block !important;
+}
+
+/* ── MapLibre popups ─────────────────────────────────────────────────────── */
+.maplibregl-popup-content {
+	background: var(--popup-bg) !important;
+	border: none !important;
+	padding: 0 !important;
+	box-shadow: none !important;
+}
+
+.maplibregl-popup-tip {
+	display: none !important;
+}
+
+.maplibregl-popup-close-button {
+	display: none !important;
+}
+
+/* ── Map markers ─────────────────────────────────────────────────────────── */
+.map-marker {
+	max-width: var(--marker-size);
+	cursor: pointer;
+}
+
+.map-marker img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+@media (max-width: 768px) {
+	.map-marker {
+		max-width: var(--marker-size-mobile);
+	}
+}
+
+/* ── Popup ───────────────────────────────────────────────────────────────── */
+.maplibregl-popup {
+	top: calc(50% + var(--header-height) / 2) !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
+	max-width: none !important;
+}
+
+/* Keep nav controls above the centered popup */
+.maplibregl-ctrl-top-right {
+	z-index: 100 !important;
+}
+
+.marker-popup {
+	width: fit-content;
+	max-width: var(--popup-width);
+	max-height: calc(100vh - var(--header-height) - 16px);
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.14));
+}
+
+.marker-popup img {
+	display: block;
+	width: auto;
+	max-width: var(--popup-width);
+	height: auto;
+	max-height: var(--popup-max-image-height);
+}
+
+.popup-close {
+	position: absolute;
+	top: 4px;
+	right: -34px;
+	width: 28px;
+	height: 28px;
+	background: rgba(0, 0, 0, 0.6);
+	color: var(--color-orange);
+	border: 1px solid var(--color-orange);
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 28px;
+	text-align: center;
+	z-index: 10;
+}
+
+.popup-close:hover {
+	background: var(--color-orange);
+	color: #000;
+}
+
+.popup-text {
+	background: rgba(255, 254, 254, 0.80);
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.marker-popup {
+		max-width: var(--popup-width-mobile);
+	}
+
+	.marker-popup img {
+		max-width: var(--popup-width-mobile);
+	}
+}
+
+.marker-popup p {
+	padding: 6px 10px;
+	font-size: 14px;
+	font-weight: var(--popup-text-weight);
+	color: var(--popup-text);
+	text-align: center;
+}
+
+.marker-popup p:first-of-type {
+	padding-top: 10px;
+}
+
+.marker-popup p:last-of-type {
+	padding-bottom: 10px;
+}
+
+.marker-popup strong {
+	color: var(--popup-text);
+}
+
+.popup-text p,
+.popup-text strong {
+	color: #000;
+}
+
+.popup-text p,
+.popup-text strong {
+	color: #000;
 }
