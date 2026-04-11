@@ -215,8 +215,7 @@ body {
 }
 
 .marker-popup {
-	width: fit-content;
-	max-width: var(--popup-width);
+	width: var(--popup-width);
 	max-height: calc(100vh - var(--header-height) - 16px);
 	overflow: hidden;
 	text-align: center;
@@ -226,8 +225,7 @@ body {
 
 .marker-popup img {
 	display: block;
-	width: auto;
-	max-width: var(--popup-width);
+	width: 100%;
 	height: auto;
 	max-height: var(--popup-max-image-height);
 }
@@ -256,23 +254,13 @@ body {
 .popup-text {
 	background: rgba(255, 254, 254, 0.80);
 	width: 100%;
-	min-width: var(--popup-width);
-	box-sizing: border-box;
 	overflow-wrap: break-word;
 	word-break: break-word;
 }
 
 @media (max-width: 768px) {
 	.marker-popup {
-		max-width: var(--popup-width-mobile);
-	}
-
-	.marker-popup img {
-		max-width: var(--popup-width-mobile);
-	}
-
-	.popup-text {
-		min-width: var(--popup-width-mobile);
+		width: var(--popup-width-mobile);
 	}
 }
 

@@ -9,7 +9,7 @@
 	const CENTER_LAT = -37.8136;
 	const CENTER_LNG = 144.9631;
 
-	const RADIUS_KM = 50;
+	const RADIUS_KM = 30;
 
 	const MELBOURNE_BOUNDS = [
 		[143.00, -39.30],
@@ -254,10 +254,10 @@
 					}).setHTML(`
 						<div class="marker-popup">
 							<button class="popup-close" aria-label="Close">✕</button>
-							<img src="${base}${m.image}" alt="${m.caption}">
+							<img src="${base}${m.image}" alt="${m.cafe_name}">
 							<div class="popup-text">
 								<p><strong>${m.cafe_name}</strong></p>
-								<p>${m.caption}</p>
+								<p>${m.address}</p>
 							</div>
 						</div>
 					`);
