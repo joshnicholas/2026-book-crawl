@@ -42,5 +42,60 @@
     "thumb_mobile": "/images/book-and-paper-c41503f1-thumb-mobile.jpg",
     "lat": -37.8577743,
     "lng": 144.897993
+  },
+  {
+    "id": "73023d57",
+    "cafe_name": "Readings Emporium",
+    "caption": "",
+    "address": "287 Lonsdale Street, Melbourne",
+    "image": "/images/readings-emporium-73023d57.jpg",
+    "thumb": "/images/readings-emporium-73023d57-thumb.jpg",
+    "thumb_mobile": "/images/readings-emporium-73023d57-thumb-mobile.jpg",
+    "lat": -37.8124868,
+    "lng": 144.9639331
+  },
+  {
+    "id": "f2605466",
+    "cafe_name": "Jeffreys Books",
+    "caption": "",
+    "address": "140 Glenferrie Road Malvern",
+    "image": "/images/jeffreys-books-f2605466.jpg",
+    "thumb": "/images/jeffreys-books-f2605466-thumb.jpg",
+    "thumb_mobile": "/images/jeffreys-books-f2605466-thumb-mobile.jpg",
+    "lat": -37.8610386,
+    "lng": 145.0287775
+  },
+  {
+    "id": "252badd8",
+    "cafe_name": "Readings Malvern",
+    "caption": "",
+    "address": "185 Glenferrie Road Malvern",
+    "image": "/images/readings-malvern-252badd8.jpg",
+    "thumb": "/images/readings-malvern-252badd8-thumb.jpg",
+    "thumb_mobile": "/images/readings-malvern-252badd8-thumb-mobile.jpg",
+    "lat": -37.859911,
+    "lng": 145.0285333
+  },
+  {
+    "id": "6d89ab89",
+    "cafe_name": "The Leaf Bookshop",
+    "caption": "",
+    "address": "3/283 High Street Ashburton 3147",
+    "image": "/images/the-leaf-bookshop-6d89ab89.jpg",
+    "thumb": "/images/the-leaf-bookshop-6d89ab89-thumb.jpg",
+    "thumb_mobile": "/images/the-leaf-bookshop-6d89ab89-thumb-mobile.jpg",
+    "lat": -37.8639307,
+    "lng": 145.0841172
+  },
+  {
+    "id": "041b90e1",
+    "cafe_name": "Readings Chadstone",
+    "caption": "",
+    "address": "1341 Dandenong Road Malvern East",
+    "image": "/images/readings-chadstone-041b90e1.jpg",
+    "thumb": "/images/readings-chadstone-041b90e1-thumb.jpg",
+    "thumb_mobile": "/images/readings-chadstone-041b90e1-thumb-mobile.jpg",
+    "lat": -37.887188,
+    "lng": 145.0842821
   }
 ]

@@ -39,8 +39,6 @@
  */
 declare module '$env/static/private' {
 	export const NVM_INC: string;
-	export const NoDefaultCurrentDirectoryInExePath: string;
-	export const CLAUDE_CODE_ENTRYPOINT: string;
 	export const TERM_PROGRAM: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
@@ -57,7 +55,6 @@ declare module '$env/static/private' {
 	export const COLOR: string;
 	export const npm_config_noproxy: string;
 	export const npm_config_local_prefix: string;
-	export const GIT_EDITOR: string;
 	export const NVM_DIR: string;
 	export const USER: string;
 	export const COMMAND_MODE: string;
@@ -67,6 +64,7 @@ declare module '$env/static/private' {
 	export const VSCODE_PROFILE_INITIALIZED: string;
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
+	export const PYDEVD_DISABLE_FILE_VALIDATION: string;
 	export const PATH: string;
 	export const npm_package_json: string;
 	export const _: string;
@@ -78,9 +76,10 @@ declare module '$env/static/private' {
 	export const PWD: string;
 	export const npm_lifecycle_event: string;
 	export const EDITOR: string;
-	export const OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE: string;
 	export const npm_package_name: string;
 	export const LANG: string;
+	export const PYTHONSTARTUP: string;
+	export const BUNDLED_DEBUGPY_PATH: string;
 	export const npm_config_npm_version: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const XPC_FLAGS: string;
@@ -88,23 +87,22 @@ declare module '$env/static/private' {
 	export const npm_package_version: string;
 	export const XPC_SERVICE_NAME: string;
 	export const VSCODE_INJECTION: string;
+	export const VSCODE_DEBUGPY_ADAPTER_ENDPOINTS: string;
 	export const SHLVL: string;
 	export const HOME: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
-	export const CLAUDE_CODE_EXECPATH: string;
+	export const PYTHON_BASIC_REPL: string;
 	export const HOMEBREW_PREFIX: string;
 	export const npm_config_cache: string;
 	export const LOGNAME: string;
 	export const npm_lifecycle_script: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
-	export const COREPACK_ENABLE_AUTO_PIN: string;
 	export const NVM_BIN: string;
 	export const npm_config_user_agent: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const GIT_ASKPASS: string;
 	export const INFOPATH: string;
 	export const HOMEBREW_CELLAR: string;
-	export const CLAUDECODE: string;
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
 	export const COLORTERM: string;
@@ -196,8 +194,6 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		NVM_INC: string;
-		NoDefaultCurrentDirectoryInExePath: string;
-		CLAUDE_CODE_ENTRYPOINT: string;
 		TERM_PROGRAM: string;
 		NODE: string;
 		INIT_CWD: string;
@@ -214,7 +210,6 @@ declare module '$env/dynamic/private' {
 		COLOR: string;
 		npm_config_noproxy: string;
 		npm_config_local_prefix: string;
-		GIT_EDITOR: string;
 		NVM_DIR: string;
 		USER: string;
 		COMMAND_MODE: string;
@@ -224,6 +219,7 @@ declare module '$env/dynamic/private' {
 		VSCODE_PROFILE_INITIALIZED: string;
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
+		PYDEVD_DISABLE_FILE_VALIDATION: string;
 		PATH: string;
 		npm_package_json: string;
 		_: string;
@@ -235,9 +231,10 @@ declare module '$env/dynamic/private' {
 		PWD: string;
 		npm_lifecycle_event: string;
 		EDITOR: string;
-		OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE: string;
 		npm_package_name: string;
 		LANG: string;
+		PYTHONSTARTUP: string;
+		BUNDLED_DEBUGPY_PATH: string;
 		npm_config_npm_version: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		XPC_FLAGS: string;
@@ -245,23 +242,22 @@ declare module '$env/dynamic/private' {
 		npm_package_version: string;
 		XPC_SERVICE_NAME: string;
 		VSCODE_INJECTION: string;
+		VSCODE_DEBUGPY_ADAPTER_ENDPOINTS: string;
 		SHLVL: string;
 		HOME: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
-		CLAUDE_CODE_EXECPATH: string;
+		PYTHON_BASIC_REPL: string;
 		HOMEBREW_PREFIX: string;
 		npm_config_cache: string;
 		LOGNAME: string;
 		npm_lifecycle_script: string;
 		VSCODE_GIT_IPC_HANDLE: string;
-		COREPACK_ENABLE_AUTO_PIN: string;
 		NVM_BIN: string;
 		npm_config_user_agent: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		GIT_ASKPASS: string;
 		INFOPATH: string;
 		HOMEBREW_CELLAR: string;
-		CLAUDECODE: string;
 		npm_node_execpath: string;
 		npm_config_prefix: string;
 		COLORTERM: string;

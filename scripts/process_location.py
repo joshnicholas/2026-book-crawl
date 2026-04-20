@@ -89,34 +89,72 @@ def process_location(image_path, cafe_name, caption, address):
     print(f"  mobile:  static/images/{thumb_mobile_name}")
     return entry
 
+# process_location(
+#     '/Users/josh/Desktop/IMG_0658.jpeg',
+#     "Jeffreys Books",
+#     "",
+#     "140 Glenferrie Road Malvern"
+# )
+
+
+# process_location(
+#     '/Users/josh/Desktop/IMG_0657.jpeg',
+#     "Readings Malvern",
+#     "",
+#     "185 Glenferrie Road Malvern"
+# )
+
+# process_location(
+#     '/Users/josh/Desktop/IMG_0656.jpeg',
+#     "The Leaf Bookshop",
+#     "",
+#     "3/283 High Street Ashburton 3147"
+# )
 
 process_location(
-    '/Users/josh/Desktop/IMG_0635.jpeg',
-    "The Chestnut Tree",
-    "Sat at a sunlit table, drinking a nice coffee",
-    "542 Barkly Street, West Footscray"
+    '/Users/josh/Desktop/IMG_0655.jpeg',
+    "Readings Chadstone",
+    "",
+    "1341 Dandenong Road Malvern East"
 )
 
 
-process_location(
-    '/Users/josh/Desktop/IMG_0632.jpeg',
-    "Seddon Book Alley",
-    "You're going to find treasures here",
-    "107 Victoria Street, Seddon"
-)
+# process_location(
+#     '/Users/josh/Desktop/IMG_0639.jpeg',
+#     "Readings Emporium",
+#     "",
+#     "287 Lonsdale Street, Melbourne"
+# )
+
+#########
+
+# process_location(
+#     '/Users/josh/Desktop/IMG_0635.jpeg',
+#     "The Chestnut Tree",
+#     "Sat at a sunlit table, drinking a nice coffee",
+#     "542 Barkly Street, West Footscray"
+# )
 
 
-process_location(
-    '/Users/josh/Desktop/IMG_0633.jpeg',
-    "Sun Bookshop",
-    "It connects right into a cool old cinema",
-    "10 Ballarat Street, Yarraville"
-)
+# process_location(
+#     '/Users/josh/Desktop/IMG_0632.jpeg',
+#     "Seddon Book Alley",
+#     "You're going to find treasures here",
+#     "107 Victoria Street, Seddon"
+# )
 
 
-process_location(
-    '/Users/josh/Desktop/IMG_0634.jpeg',
-    "Book and Paper",
-    "They have some prints by local artists",
-    "36 Douglas Parade, Williamstown"
-)
+# process_location(
+#     '/Users/josh/Desktop/IMG_0633.jpeg',
+#     "Sun Bookshop",
+#     "It connects right into a cool old cinema",
+#     "10 Ballarat Street, Yarraville"
+# )
+
+
+# process_location(
+#     '/Users/josh/Desktop/IMG_0634.jpeg',
+#     "Book and Paper",
+#     "They have some prints by local artists",
+#     "36 Douglas Parade, Williamstown"
+# )
