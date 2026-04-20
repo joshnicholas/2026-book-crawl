@@ -36,6 +36,7 @@
 	--header-height:      58px;             /* keep in sync with actual rendered height */
 
 	/* ── Marker & popup ──────────────────────────────────────────────────── */
+	--marker-border-color:    var(--map-park); /* thin border around thumbnails */
 	--marker-size:            150px;   /* desktop thumbnail size */
 	--marker-size-mobile:     100px;   /* mobile thumbnail size */
 	--marker-rotation-range:  25;      /* thumbnails rotate ± this many degrees */
@@ -193,6 +194,7 @@ body {
 	display: block;
 	width: 100%;
 	height: auto;
+	outline: 0.75px solid var(--marker-border-color);
 }
 
 @media (max-width: 768px) {
