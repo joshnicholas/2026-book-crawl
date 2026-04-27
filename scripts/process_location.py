@@ -80,6 +80,13 @@ def process_location(image_path, cafe_name, caption, address):
         with open(MARKERS_FILE) as f:
             markers = json.load(f)
     markers.append(entry)
+
+    markers = [m for m in markers if (PROJECT_ROOT / "static" / m["image"].lstrip("/")).exists()]
+    seen = {}
+    for m in markers:
+        seen[m["cafe_name"]] = m
+    markers = list(seen.values())
+
     with open(MARKERS_FILE, "w") as f:
         json.dump(markers, f, indent=2)
 
@@ -103,12 +110,12 @@ def process_location(image_path, cafe_name, caption, address):
 #     "361 Sydney Road, Brunswick"
 # )
 
-# process_location(
-#     '/Users/josh/Desktop/IMG_0664.jpeg ',
-#     "Readings Kids",
-#     "",
-#     "315 Lygon Street, Carlton"
-# )
+process_location(
+    '/Users/josh/Desktop/IMG_0664.jpeg',
+    "Readings Kids",
+    "",
+    "315 Lygon Street, Carlton"
+)
 
 # process_location(
 #     '/Users/josh/Desktop/IMG_0665.jpeg',

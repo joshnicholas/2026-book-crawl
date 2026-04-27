@@ -121,17 +121,6 @@
     "lng": 144.961628
   },
   {
-    "id": "8c0c1589",
-    "cafe_name": "Readings Kids",
-    "caption": "",
-    "address": "315 Lygon Street, Carlton",
-    "image": "/images/readings-kids-8c0c1589.jpg",
-    "thumb": "/images/readings-kids-8c0c1589-thumb.jpg",
-    "thumb_mobile": "/images/readings-kids-8c0c1589-thumb-mobile.jpg",
-    "lat": -37.7979204,
-    "lng": 144.9672054
-  },
-  {
     "id": "b77687d1",
     "cafe_name": "Readings Carlton",
     "caption": "",
@@ -152,5 +141,16 @@
     "thumb_mobile": "/images/through-the-looking-glass-fitzroy-79d45c11-thumb-mobile.jpg",
     "lat": -37.7970038,
     "lng": 144.9784555
+  },
+  {
+    "id": "9c80d577",
+    "cafe_name": "Readings Kids",
+    "caption": "",
+    "address": "315 Lygon Street, Carlton",
+    "image": "/images/readings-kids-9c80d577.jpg",
+    "thumb": "/images/readings-kids-9c80d577-thumb.jpg",
+    "thumb_mobile": "/images/readings-kids-9c80d577-thumb-mobile.jpg",
+    "lat": -37.7979204,
+    "lng": 144.9672054
   }
 ]
