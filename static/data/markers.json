@@ -97,5 +97,60 @@
     "thumb_mobile": "/images/readings-chadstone-041b90e1-thumb-mobile.jpg",
     "lat": -37.887188,
     "lng": 145.0842821
+  },
+  {
+    "id": "e3b4a0e9",
+    "cafe_name": "The Little Bookroom",
+    "caption": "",
+    "address": "8 Village Avenue, Brunswick East",
+    "image": "/images/the-little-bookroom-e3b4a0e9.jpg",
+    "thumb": "/images/the-little-bookroom-e3b4a0e9-thumb.jpg",
+    "thumb_mobile": "/images/the-little-bookroom-e3b4a0e9-thumb-mobile.jpg",
+    "lat": -37.7718221,
+    "lng": 144.9785267
+  },
+  {
+    "id": "705f8953",
+    "cafe_name": "Brunswick Bound",
+    "caption": "",
+    "address": "361 Sydney Road, Brunswick",
+    "image": "/images/brunswick-bound-705f8953.jpg",
+    "thumb": "/images/brunswick-bound-705f8953-thumb.jpg",
+    "thumb_mobile": "/images/brunswick-bound-705f8953-thumb-mobile.jpg",
+    "lat": -37.7691316,
+    "lng": 144.961628
+  },
+  {
+    "id": "8c0c1589",
+    "cafe_name": "Readings Kids",
+    "caption": "",
+    "address": "315 Lygon Street, Carlton",
+    "image": "/images/readings-kids-8c0c1589.jpg",
+    "thumb": "/images/readings-kids-8c0c1589-thumb.jpg",
+    "thumb_mobile": "/images/readings-kids-8c0c1589-thumb-mobile.jpg",
+    "lat": -37.7979204,
+    "lng": 144.9672054
+  },
+  {
+    "id": "b77687d1",
+    "cafe_name": "Readings Carlton",
+    "caption": "",
+    "address": "309 Lygon Street, Carlton",
+    "image": "/images/readings-carlton-b77687d1.jpg",
+    "thumb": "/images/readings-carlton-b77687d1-thumb.jpg",
+    "thumb_mobile": "/images/readings-carlton-b77687d1-thumb-mobile.jpg",
+    "lat": -37.798052,
+    "lng": 144.967187
+  },
+  {
+    "id": "79d45c11",
+    "cafe_name": "Through the Looking Glass Fitzroy",
+    "caption": "",
+    "address": "341 Brunswick Street, Fitzroy",
+    "image": "/images/through-the-looking-glass-fitzroy-79d45c11.jpg",
+    "thumb": "/images/through-the-looking-glass-fitzroy-79d45c11-thumb.jpg",
+    "thumb_mobile": "/images/through-the-looking-glass-fitzroy-79d45c11-thumb-mobile.jpg",
+    "lat": -37.7970038,
+    "lng": 144.9784555
   }
 ]

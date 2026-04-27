@@ -90,6 +90,45 @@ def process_location(image_path, cafe_name, caption, address):
     return entry
 
 # process_location(
+#     '/Users/josh/Desktop/IMG_0662.jpeg',
+#     "The Little Bookroom",
+#     "",
+#     "8 Village Avenue, Brunswick East"
+# )
+
+# process_location(
+#     '/Users/josh/Desktop/IMG_0663.jpeg',
+#     "Brunswick Bound",
+#     "",
+#     "361 Sydney Road, Brunswick"
+# )
+
+# process_location(
+#     '/Users/josh/Desktop/IMG_0664.jpeg ',
+#     "Readings Kids",
+#     "",
+#     "315 Lygon Street, Carlton"
+# )
+
+# process_location(
+#     '/Users/josh/Desktop/IMG_0665.jpeg',
+#     "Readings Carlton",
+#     "",
+#     "309 Lygon Street, Carlton"
+# )
+
+# process_location(
+#     '/Users/josh/Desktop/IMG_0666.jpeg',
+#     "Through the Looking Glass Fitzroy",
+#     "",
+#     "341 Brunswick Street, Fitzroy"
+# )
+
+
+
+
+
+# process_location(
 #     '/Users/josh/Desktop/IMG_0658.jpeg',
 #     "Jeffreys Books",
 #     "",
@@ -111,12 +150,12 @@ def process_location(image_path, cafe_name, caption, address):
 #     "3/283 High Street Ashburton 3147"
 # )
 
-process_location(
-    '/Users/josh/Desktop/IMG_0655.jpeg',
-    "Readings Chadstone",
-    "",
-    "1341 Dandenong Road Malvern East"
-)
+# process_location(
+#     '/Users/josh/Desktop/IMG_0655.jpeg',
+#     "Readings Chadstone",
+#     "",
+#     "1341 Dandenong Road Malvern East"
+# )
 
 
 # process_location(
